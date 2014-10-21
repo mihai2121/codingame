@@ -1,14 +1,17 @@
 [codingame][home]
 ============================
-_solving the games and contests posted to codingame. _
+_solving the games and contests posted to codingame._
 
 usage
 -----
-{{github.project.usage}}
+these solutions are run and tested in the codingame ide.
+some of these may be a work in progress, and thus, they may not pass the tests.
+still, you are strongly advised to complete each game before referencing its material.
 
 purpose
 -------
-{{github.project.purpose}}
+left unchecked the blades of mental hack foo start to dull.
+this project aims to hone my skills as a multi-lingual programmer.
 
 license
 -------
@@ -22,4 +25,4 @@ the software is provided "as is", without warranty of any kind, express or impli
 in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
 <!-- extrenal project page. -->
-[home]: {{github.project.url}} "{{github.project.name}}"
+[home]: http://www.codingame.com/profile/1dce61a80c4cba0d56aa9c39bfed67b2613615 "codingame profile page"

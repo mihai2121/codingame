@@ -15,7 +15,8 @@ this project aims to hone my skills as a multi-lingual programmer.
 
 license
 -------
-copyright © mr axilus. {{coinbase.button}} with bitcoins.
+copyright © mr axilus.
+<a class="coinbase-button" data-code="9284d437b1c11d75e69bc54b2761c2ef" data-button-style="custom_small" href="https://coinbase.com/checkouts/9284d437b1c11d75e69bc54b2761c2ef">sponsor</a> with bitcoins.
 
 permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "software"), to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, and to permit persons to whom the software is furnished to do so, subject to the following conditions:
 

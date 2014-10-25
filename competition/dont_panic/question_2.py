@@ -1,5 +1,6 @@
 import sys, math
-from collection import defaultdict
+from collections import defaultdict
+
 # Auto-generated code below aims at helping you parse
 # the standard input according to the problem statement.
 
@@ -13,20 +14,27 @@ from collection import defaultdict
 # nbElevators: number of elevators
 nbFloors, width, nbRounds, exitFloor, exitPos, nbTotalClones, nbAdditionalElevators, nbElevators = [int(i) for i in input().split()]
 
-elevator = {}
+elevator = defaultdict(list)
 for i in range(nbElevators):
     # elevatorFloor: floor on which this elevator is found
     # elevatorPos: position of the elevator on its floor
     elevatorFloor, elevatorPos = [int(i) for i in input().split()]
-    elevator[elevatorFloor] = elevatorPos
+    elevator[elevatorFloor].append(elevatorPos)
     
 print(nbAdditionalElevators, nbTotalClones, elevator, file=sys.stderr)
 
 def act(action):
     global nbTotalClones
+    global nbAdditionalElevators
     if action == 'BLOCK':
         nbTotalClones = nbTotalClones - 1
+    elif action == 'ELEVATOR':
+        elevator[cloneFloor].append(clonePos)
+        nbAdditionalElevators = nbAdditionalElevators - 1
     print(action)
+
+def closest(positionClone, positionElevators):
+    return min(positionElevators, key=lambda x:abs(x - positionClone))
 
 # game loop
 while 1:
@@ -39,10 +47,9 @@ while 1:
         
     if clonePos == width - 1 or clonePos == 0:  # has reached outer bounds.
         act('BLOCK')
-    elif cloneFloor != exitFloor and cloneFloor not in elevator:  # if floor is empty...
+    elif cloneFloor != exitFloor and cloneFloor not in elevator:  # floor is empty...
         if cloneFloor != -1:  # and clone exists.
             act('ELEVATOR')
-            elevator[cloneFloor] = clonePos
         else:
             act('WAIT')
     elif cloneFloor == exitFloor:  # if floor has the exit....
@@ -53,9 +60,11 @@ while 1:
         else:
             act('WAIT')
     elif cloneFloor in elevator:  # if floor has an elevator...
-        if clonePos < elevator[cloneFloor] and direction == 'LEFT':  # and going opposite direction of elevator.
+        if abs(clonePos - closest(clonePos, elevator[cloneFloor])) >= width / 2 and nbAdditionalElevators >= nbFloors - len(elevator):  # and elevator too far away.
+            act('ELEVATOR')
+        elif clonePos < closest(clonePos, elevator[cloneFloor]) and direction == 'LEFT':  # and going opposite direction of closest elevator.
             act('BLOCK')
-        elif clonePos > elevator[cloneFloor] and direction == 'RIGHT':  # and going opposite direction of elevator.
+        elif clonePos > closest(clonePos, elevator[cloneFloor]) and direction == 'RIGHT':  # and going opposite direction of closest elevator.
             act('BLOCK')
         else:
             act('WAIT')

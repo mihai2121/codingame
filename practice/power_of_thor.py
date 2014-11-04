@@ -1,3 +1,4 @@
+# to implement: http://www.redblobgames.com/pathfinding/a-star/introduction.html
 import sys as s
 import collections as c
 

@@ -1,5 +1,5 @@
-[CodinGame][codingame_profile]
-============================
+[CodinGame][codingame_profile] ![GitHub version][version_badge] [![Build status][travis_image]][travis_status]
+==============================================================================================================
 _Solving the challenges and contests hosted on CodinGame._
 
 Usage
@@ -20,3 +20,6 @@ This project is licensed under [CC BY-NC-SA 4.0][license].
 
 [codingame_profile]: http://www.codingame.com/profile/1dce61a80c4cba0d56aa9c39bfed67b2613615
 [license]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+[travis_image]: https://secure.travis-ci.org/mraxilus/codingame.png?branch=master
+[travis_status]: https://secure.travis-ci.org/mraxilus/codingame
+[version_badge]: https://badge.fury.io/gh/mraxilus%2Fcodingame.svg 

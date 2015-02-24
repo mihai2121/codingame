@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-""" CodingGame: Onboarding
+"""CodingGame: Onboarding
 
 The goal of this game is to protect a ship from oncoming enemies.
 Each turn a set number of enemies will be within shooting range.

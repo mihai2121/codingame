@@ -24,6 +24,16 @@ def detect():
     assert (onboarding.detect(dictionary_defined['name'],
                               dictionary_defined['distance']) ==
             dictionary_defined)
+ 
+
+@TESTS.test
+def choose():
+    assert False 
+
+
+@TESTS.test
+def target():
+    assert False
 
 if __name__ == '__main__':
     TESTS.run()

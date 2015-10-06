@@ -1,5 +1,7 @@
-[CodinGame][codingame_profile] ![GitHub version][version_badge] [![Build status][travis_image]][travis_status]
-==============================================================================================================
+[CodinGame][codingame_profile]
+==============================
+![GitHub version][version_badge] [![Build status][travis_image]][travis_status]
+
 _Solving the challenges and contests hosted on CodinGame._
 
 Usage
